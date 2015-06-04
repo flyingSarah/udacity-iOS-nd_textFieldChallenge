@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TextFieldChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your zip code..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qzl-gg-zse">
+                                <rect key="frame" x="26" y="50" width="268" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="78T-vk-uIm">
+                                <rect key="frame" x="26" y="140" width="211" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="etL-UQ-FdC">
+                                <rect key="frame" x="245" y="140" width="51" height="31"/>
+                            </switch>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$0.00" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="avu-dp-VBc">
+                                <rect key="frame" x="26" y="95" width="268" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="avu-dp-VBc" firstAttribute="top" secondItem="Qzl-gg-zse" secondAttribute="bottom" constant="15" id="2ga-bE-DxV"/>
+                            <constraint firstItem="78T-vk-uIm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="85h-hg-6OF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="avu-dp-VBc" secondAttribute="trailing" constant="10" id="GA5-e4-26i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="etL-UQ-FdC" secondAttribute="trailing" constant="10" id="Ul1-fI-GXU"/>
+                            <constraint firstItem="Qzl-gg-zse" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="WAB-y7-yVp"/>
+                            <constraint firstItem="78T-vk-uIm" firstAttribute="top" secondItem="avu-dp-VBc" secondAttribute="bottom" constant="15" id="WUl-H0-L7h"/>
+                            <constraint firstItem="etL-UQ-FdC" firstAttribute="leading" secondItem="78T-vk-uIm" secondAttribute="trailing" constant="8" id="agj-NA-ClS"/>
+                            <constraint firstItem="avu-dp-VBc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="gdf-T2-Rcq"/>
+                            <constraint firstItem="Qzl-gg-zse" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="30" id="lsr-3T-gsn"/>
+                            <constraint firstAttribute="centerX" secondItem="Qzl-gg-zse" secondAttribute="centerX" id="nm3-t9-3W6"/>
+                            <constraint firstItem="etL-UQ-FdC" firstAttribute="top" secondItem="avu-dp-VBc" secondAttribute="bottom" constant="15" id="s45-bI-OVJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qzl-gg-zse" secondAttribute="trailing" constant="10" id="wK3-Hi-Yg8"/>
+                            <constraint firstAttribute="centerX" secondItem="avu-dp-VBc" secondAttribute="centerX" id="zsF-Fl-Bor"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="currencyField" destination="avu-dp-VBc" id="al3-jK-sEk"/>
+                        <outlet property="toggleTypeField" destination="78T-vk-uIm" id="sO6-r1-dnl"/>
+                        <outlet property="typeSwitch" destination="etL-UQ-FdC" id="kC9-A3-Gy4"/>
+                        <outlet property="zipCodeField" destination="Qzl-gg-zse" id="9Co-KS-Rht"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
